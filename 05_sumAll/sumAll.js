@@ -1,6 +1,6 @@
 const sumAll = function(num1, num2) {
     // both have to be numbers, cannot be negative
-    if ((isNaN(num1)) || isNaN(num2)) {
+    if ((num1 < 0) || (num2 < 0) || (!Number.isInteger(num1)) || (!Number.isInteger(num2))) {
         return 'ERROR';
     }
     else {
@@ -16,8 +16,9 @@ const sumAll = function(num1, num2) {
         for (let i = startInterval; i <= endInterval; i++) {
             sum += i;
         }
-        return sum;
+        return sum;        
     }
+
 };
 
 // Do not edit below this line
